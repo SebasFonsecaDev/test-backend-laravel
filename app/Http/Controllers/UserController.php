@@ -19,7 +19,6 @@ class UserController extends Controller
             ->get();
 
         return view('users.index', compact('users'));
-        // return response()->json(['users' => $users]);
     }
 
     public function showTransactions($userId)
@@ -44,10 +43,6 @@ class UserController extends Controller
         $transactions = $account->transactions()->orderBy('transaction_date', 'desc')->get();
 
         return view('transactions.index', compact('transactions', 'account'));
-        // return response()->json([
-        //     'transactions' => $transactions,
-        //     'account' => $account
-        // ]);
     }
 
     public function showTransactionsByUserId($userId)

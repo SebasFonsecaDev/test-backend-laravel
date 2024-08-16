@@ -12,9 +12,6 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
-        // if (!$request->expectsJson()) {
-        //     return response()->json(["error" => "usuario no autorizado"], 401);
-        // }
         return null;
     }
 }
